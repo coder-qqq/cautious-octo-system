@@ -1,0 +1,249 @@
+To run a command as administrator (user "root"), use "sudo <command>".
+See "man sudo_root" for details.
+
+qin@qin-virtual-machine:~$ wc -l /home
+wc: /home: Is a directory
+0 /home
+qin@qin-virtual-machine:~$ touch txt
+qin@qin-virtual-machine:~$ cat txt
+Desktop
+Documents
+Downloads
+Music
+Pictures
+Public
+snap
+Templates
+txt
+Videos
+qin@qin-virtual-machine:~$ wc -l txt
+10 txt
+qin@qin-virtual-machine:~$ wc -m txt
+76 txt
+qin@qin-virtual-machine:~$ wc -w  txt
+10 txt
+qin@qin-virtual-machine:~$ wc -c txt
+76 txt
+qin@qin-virtual-machine:~$ echo  "hello linux" > txt
+qin@qin-virtual-machine:~$ cat  txt
+hello linux
+qin@qin-virtual-machine:~$ echo "i am coder" >> txt
+qin@qin-virtual-machine:~$ cat txt
+hello linux
+i am coder
+qin@qin-virtual-machine:~$ cat txt
+hello linux
+i am coder
+qin@qin-virtual-machine:~$ touch txt1
+qin@qin-virtual-machine:~$ cat txt1
+qin@qin-virtual-machine:~$ cat txt
+hello linux
+i am coder
+qin@qin-virtual-machine:~$ touch txt
+qin@qin-virtual-machine:~$ cat txt
+hello linux
+i am coder
+qin@qin-virtual-machine:~$ cat /home
+cat: /home: Is a directory
+qin@qin-virtual-machine:~$ cat test
+cat: test: No such file or directory
+qin@qin-virtual-machine:~$ cat /home/Desktop/test
+cat: /home/Desktop/test: No such file or directory
+qin@qin-virtual-machine:~$ cat -r /home
+cat: invalid option -- 'r'
+Try 'cat --help' for more information.
+qin@qin-virtual-machine:~$ cat -r Desktop
+cat: invalid option -- 'r'
+Try 'cat --help' for more information.
+qin@qin-virtual-machine:~$ rm txt
+qin@qin-virtual-machine:~$ cat txt
+cat: txt: No such file or directory
+qin@qin-virtual-machine:~$ toych txt
+
+Command 'toych' not found, did you mean:
+
+  command 'touch' from deb coreutils (8.30-3ubuntu2)
+
+Try: sudo apt install <deb name>
+
+qin@qin-virtual-machine:~$ touch txt
+qin@qin-virtual-machine:~$ 
+qin@qin-virtual-machine:~$ cat txt
+qin@qin-virtual-machine:~$ touch test.txt
+qin@qin-virtual-machine:~$ 
+qin@qin-virtual-machine:~$ cat test.txt
+qin@qin-virtual-machine:~$ cat test.txt
+svhs
+dsvs
+vsdsd
+vdxvsd
+vsdvsd
+svsdw
+svseff
+eeee
+ffff
+gbbbb
+swef
+v bew
+dwww
+wfg
+wwwfff
+qin@qin-virtual-machine:~$ tail test.txt
+svsdw
+svseff
+eeee
+ffff
+gbbbb
+swef
+v bew
+dwww
+wfg
+wwwfff
+qin@qin-virtual-machine:~$ tail -12 test.txt
+vdxvsd
+vsdvsd
+svsdw
+svseff
+eeee
+ffff
+gbbbb
+swef
+v bew
+dwww
+wfg
+wwwfff
+qin@qin-virtual-machine:~$ ^C
+qin@qin-virtual-machine:~$ tree -a
+
+Command 'tree' not found, but can be installed with:
+
+sudo snap install tree  # version 2.1.3+pkg-5852, or
+sudo apt  install tree  # version 1.8.0-1
+
+See 'snap info tree' for additional versions.
+
+qin@qin-virtual-machine:~$ tree -d
+
+Command 'tree' not found, but can be installed with:
+
+sudo snap install tree  # version 2.1.3+pkg-5852, or
+sudo apt  install tree  # version 1.8.0-1
+
+See 'snap info tree' for additional versions.
+
+qin@qin-virtual-machine:~$ 
+
+
+
+
+qin@qin-virtual-machine:~$ sudo apt install tree
+[sudo] password for qin: 
+tSorry, try again.
+[sudo] password for qin: 
+tSorry, try again.
+[sudo] password for qin: 
+sudo: 2 incorrect password attempts
+qin@qin-virtual-machine:~$ sudo apt install tree
+[sudo] password for qin: 
+cxSorry, try again.
+[sudo] password for qin: 
+sudo: 1 incorrect password attempt
+qin@qin-virtual-machine:~$ touch txt2
+qin@qin-virtual-machine:~$ mkdir txt4
+qin@qin-virtual-machine:~$ ls -l
+total 44
+drwxr-xr-x 3 qin qin 4096 2月  15 23:13 Desktop
+drwxr-xr-x 2 qin qin 4096 2月  15 17:33 Documents
+drwxr-xr-x 2 qin qin 4096 2月  15 17:33 Downloads
+drwxr-xr-x 2 qin qin 4096 2月  15 17:33 Music
+drwxr-xr-x 2 qin qin 4096 2月  15 17:33 Pictures
+drwxr-xr-x 2 qin qin 4096 2月  15 17:33 Public
+drwx------ 3 qin qin 4096 2月  15 17:35 snap
+drwxr-xr-x 2 qin qin 4096 2月  15 17:33 Templates
+-rw-rw-r-- 1 qin qin   86 3月   2 19:41 test.txt
+-rw-rw-r-- 1 qin qin    0 3月   2 19:39 txt
+-rw-rw-r-- 1 qin qin    0 3月   2 19:34 txt1
+-rw-rw-r-- 1 qin qin    0 3月   2 20:40 txt2
+drwxrwxr-x 2 qin qin 4096 3月   2 20:40 txt4
+drwxr-xr-x 2 qin qin 4096 2月  15 17:33 Videos
+qin@qin-virtual-machine:~$ chmod u=rwx,g=r,o=w
+chmod: missing operand after ‘u=rwx,g=r,o=w’
+Try 'chmod --help' for more information.
+qin@qin-virtual-machine:~$ chmod u=r,g=w,o=x txt2
+qin@qin-virtual-machine:~$ ls -l
+total 44
+drwxr-xr-x 3 qin qin 4096 2月  15 23:13 Desktop
+drwxr-xr-x 2 qin qin 4096 2月  15 17:33 Documents
+drwxr-xr-x 2 qin qin 4096 2月  15 17:33 Downloads
+drwxr-xr-x 2 qin qin 4096 2月  15 17:33 Music
+drwxr-xr-x 2 qin qin 4096 2月  15 17:33 Pictures
+drwxr-xr-x 2 qin qin 4096 2月  15 17:33 Public
+drwx------ 3 qin qin 4096 2月  15 17:35 snap
+drwxr-xr-x 2 qin qin 4096 2月  15 17:33 Templates
+-rw-rw-r-- 1 qin qin   86 3月   2 19:41 test.txt
+-rw-rw-r-- 1 qin qin    0 3月   2 19:39 txt
+-rw-rw-r-- 1 qin qin    0 3月   2 19:34 txt1
+-r---w---x 1 qin qin    0 3月   2 20:40 txt2
+drwxrwxr-x 2 qin qin 4096 3月   2 20:40 txt4
+drwxr-xr-x 2 qin qin 4096 2月  15 17:33 Videos
+qin@qin-virtual-machine:~$ chmod -R u=rwx,g=r,o=x txt4
+qin@qin-virtual-machine:~$ ls -l
+total 44
+drwxr-xr-x 3 qin qin 4096 2月  15 23:13 Desktop
+drwxr-xr-x 2 qin qin 4096 2月  15 17:33 Documents
+drwxr-xr-x 2 qin qin 4096 2月  15 17:33 Downloads
+drwxr-xr-x 2 qin qin 4096 2月  15 17:33 Music
+drwxr-xr-x 2 qin qin 4096 2月  15 17:33 Pictures
+drwxr-xr-x 2 qin qin 4096 2月  15 17:33 Public
+drwx------ 3 qin qin 4096 2月  15 17:35 snap
+drwxr-xr-x 2 qin qin 4096 2月  15 17:33 Templates
+-rw-rw-r-- 1 qin qin   86 3月   2 19:41 test.txt
+-rw-rw-r-- 1 qin qin    0 3月   2 19:39 txt
+-rw-rw-r-- 1 qin qin    0 3月   2 19:34 txt1
+-r---w---x 1 qin qin    0 3月   2 20:40 txt2
+drwxr----x 2 qin qin 4096 3月   2 20:40 txt4
+drwxr-xr-x 2 qin qin 4096 2月  15 17:33 Videos
+qin@qin-virtual-machine:~$ 
+qin@qin-virtual-machine:~$ chmod 751 txt2
+qin@qin-virtual-machine:~$ ls -l
+total 44
+drwxr-xr-x 3 qin qin 4096 2月  15 23:13 Desktop
+drwxr-xr-x 2 qin qin 4096 2月  15 17:33 Documents
+drwxr-xr-x 2 qin qin 4096 2月  15 17:33 Downloads
+drwxr-xr-x 2 qin qin 4096 2月  15 17:33 Music
+drwxr-xr-x 2 qin qin 4096 2月  15 17:33 Pictures
+drwxr-xr-x 2 qin qin 4096 2月  15 17:33 Public
+drwx------ 3 qin qin 4096 2月  15 17:35 snap
+drwxr-xr-x 2 qin qin 4096 2月  15 17:33 Templates
+-rw-rw-r-- 1 qin qin   86 3月   2 19:41 test.txt
+-rw-rw-r-- 1 qin qin    0 3月   2 19:39 txt
+-rw-rw-r-- 1 qin qin    0 3月   2 19:34 txt1
+-rwxr-x--x 1 qin qin    0 3月   2 20:40 txt2
+drwxr----x 2 qin qin 4096 3月   2 20:40 txt4
+drwxr-xr-x 2 qin qin 4096 2月  15 17:33 Videos
+qin@qin-virtual-machine:~$ chmod 526 txt4
+qin@qin-virtual-machine:~$ ls -l
+total 44
+drwxr-xr-x 3 qin qin 4096 2月  15 23:13 Desktop
+drwxr-xr-x 2 qin qin 4096 2月  15 17:33 Documents
+drwxr-xr-x 2 qin qin 4096 2月  15 17:33 Downloads
+drwxr-xr-x 2 qin qin 4096 2月  15 17:33 Music
+drwxr-xr-x 2 qin qin 4096 2月  15 17:33 Pictures
+drwxr-xr-x 2 qin qin 4096 2月  15 17:33 Public
+drwx------ 3 qin qin 4096 2月  15 17:35 snap
+drwxr-xr-x 2 qin qin 4096 2月  15 17:33 Templates
+-rw-rw-r-- 1 qin qin   86 3月   2 19:41 test.txt
+-rw-rw-r-- 1 qin qin    0 3月   2 19:39 txt
+-rw-rw-r-- 1 qin qin    0 3月   2 19:34 txt1
+-rwxr-x--x 1 qin qin    0 3月   2 20:40 txt2
+dr-x-w-rw- 2 qin qin 4096 3月   2 20:40 txt4
+drwxr-xr-x 2 qin qin 4096 2月  15 17:33 Videos
+qin@qin-virtual-machine:~$ 
+
+
+
+
+
+
+
+
